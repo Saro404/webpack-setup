@@ -15,7 +15,15 @@ yarn start
 
 ### 🔥 The generated files are inside "static" folder.
 
+```
+http://localhost:9000
+```
 
+
+### 🛩 deployment
+```
+yarn build
+```
 
 
 ## Credits
