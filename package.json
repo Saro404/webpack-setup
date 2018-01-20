@@ -1,0 +1,64 @@
+{
+  "name": "HLS",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "dependencies": {
+    "animate-sass": "^0.8.2",
+    "autoprefixer": "^7.1.5",
+    "bootstrap": "v4.0.0-beta",
+    "core-js": "2.4.1",
+    "html-webpack-exclude-assets-plugin": "^0.0.5",
+    "jquery": "3.2.1",
+    "popper.js": "^1.12.5",
+    "precss": "^2.0.0",
+    "tether": "1.4.0",
+    "webpack-rtl-plugin": "^1.6.0"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.12",
+    "browser-sync-webpack-plugin": "1.2.0",
+    "copy-webpack-plugin": "4.0.1",
+    "css-loader": "0.28.4",
+    "exports-loader": "0.6.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "0.11.2",
+    "html-loader": "0.4.5",
+    "html-webpack-plugin": "2.29.0",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "2.0.6",
+    "proxy-middleware": "0.15.0",
+    "rimraf": "2.6.1",
+    "sass-loader": "6.0.6",
+    "sourcemap-istanbul-instrumenter-loader": "0.2.0",
+    "string-replace-webpack-plugin": "0.1.3",
+    "style-loader": "0.18.2",
+    "svg-sprite-loader": "^3.4.1",
+    "svgo-loader": "^2.1.0",
+    "to-string-loader": "1.1.5",
+    "webpack": "3.3.0",
+    "webpack-dev-server": "2.5.1",
+    "webpack-merge": "4.1.0",
+    "webpack-notifier": "1.5.0",
+    "write-file-webpack-plugin": "4.1.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "scripts": {
+    "cleanup": "rimraf static}",
+    "start": "yarn run webpack:dev",
+    "build": "yarn run webpack:prod",
+    "webpack:dev": "yarn run webpack-dev-server -- --config webpack/webpack.dev.js --bail --progress --inline --hot --profile --port=9060",
+    "webpack:build:main": "yarn run webpack -- --config webpack/webpack.dev.js --progress --profile",
+    "webpack:build": "yarn run cleanup && yarn run webpack:build:main",
+    "webpack:prod:main": "yarn run webpack -- --config webpack/webpack.prod.js --progress --profile",
+    "webpack:prod": "yarn run cleanup && yarn run webpack:prod:main",
+    "webpack-dev-server": "node --max_old_space_size=4096 node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "webpack": "node --max_old_space_size=4096 node_modules/webpack/bin/webpack.js"
+  }
+}
