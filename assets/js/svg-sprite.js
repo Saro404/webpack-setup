@@ -1,1 +1,1 @@
-import hey from '../svg/smiley-smile.svg';
+import smiley_smile from '../svg/smiley_smile.svg';
