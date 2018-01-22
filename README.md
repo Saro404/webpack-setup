@@ -27,6 +27,6 @@ yarn build
 
 
 ## Credits
-![jhipster](https://github.com/jhipster/jhipster-sample-app/tree/master/webpack)
+[jhipster](https://github.com/jhipster/jhipster-sample-app/tree/master/webpack)
 
-![Right-to-Left](https://www.npmjs.com/package/rtl-sass)
+[Right-to-Left](https://www.npmjs.com/package/rtl-sass)
